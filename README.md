@@ -19,3 +19,11 @@ posts to display.
 You can press Ctrl C (keyboard interrupt to exit a post that is currently playing)
 
 The entry point is reddit_tts.py and is using Python 3.
+
+This script also requires:
+
+```
+praw
+inquirer
+pyttsx3
+```

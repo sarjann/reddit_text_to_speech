@@ -18,5 +18,10 @@ engine.setProperty('voice', voices[7].id)
 
 def speak(msg):
 	engine.say(msg)
-	engine.runAndWait()
+	try:
+		engine.startLoop()
+		engine.runAndWait()
+		engine.endLoop()
+	except KeyboardInterrupt:
+		engine.endLoop()
 	engine.stop()

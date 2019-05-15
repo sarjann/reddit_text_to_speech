@@ -22,7 +22,15 @@ def make_menu(look_up, choices, submissions_store):
 		),
 		]
 	title = inquirer.prompt(menu).get('posts')
-	os.system('clear') 
+
+	if (os.name == "posix"):
+		os.system('clear')
+	else:
+		try:
+			os.system('CLS')
+		except:
+			pass
+
 	index = look_up[title]
 	submission = submissions_store[index]
 	return submission
